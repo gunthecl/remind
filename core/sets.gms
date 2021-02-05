@@ -652,9 +652,9 @@ teEs(all_teEs)           "ES technologies which are actually used (to be filled 
 
 sets
 
-   all_regi "all regions" /CAZ,CHA,EUR,IND,JPN,LAM,MEA,NEU,OAS,REF,SSA,USA/
+   all_regi "all regions" /LAM,OAS,SSA,EUR,NEU,MEA,REF,CAZ,CHA,IND,JPN,USA/
 
-   ext_regi "extended regions list (includes subsets of H12 regions)" / EUR_regi,CAZ,CHA,EUR,IND,JPN,LAM,MEA,NEU,OAS,REF,SSA,USA /
+   ext_regi "extended regions list (includes subsets of H12 regions)" / EUR_regi,LAM,OAS,SSA,EUR,NEU,MEA,REF,CAZ,CHA,IND,JPN,USA /
 
    regi_group(ext_regi,all_regi) "region groups (regions that together corresponds to a H12 region)"
       /
@@ -690,38 +690,38 @@ sets
 
    regi2iso(all_regi,iso) "mapping regions to iso countries"
       /
-       CAZ . (AUS,CAN,HMD,NZL,SPM)
-       CHA . (CHN,HKG,MAC,TWN)
-       EUR . (ALA,AUT,BEL,BGR,CYP,CZE,DEU,DNK,ESP,EST)
-       EUR . (FIN,FRA,FRO,GBR,GGY,GIB,GRC,HRV,HUN,IMN)
-       EUR . (IRL,ITA,JEY,LTU,LUX,LVA,MLT,NLD,POL,PRT)
-       EUR . (ROU,SVK,SVN,SWE)
-       IND . (IND)
-       JPN . (JPN)
        LAM . (ABW,AIA,ARG,ATA,ATG,BES,BHS,BLM,BLZ,BMU)
        LAM . (BOL,BRA,BRB,BVT,CHL,COL,CRI,CUB,CUW,CYM)
        LAM . (DMA,DOM,ECU,FLK,GLP,GRD,GTM,GUF,GUY,HND)
        LAM . (HTI,JAM,KNA,LCA,MAF,MEX,MSR,MTQ,NIC,PAN)
        LAM . (PER,PRI,PRY,SGS,SLV,SUR,SXM,TCA,TTO,URY)
        LAM . (VCT,VEN,VGB,VIR)
-       MEA . (ARE,BHR,DZA,EGY,ESH,IRN,IRQ,ISR,JOR,KWT)
-       MEA . (LBN,LBY,MAR,OMN,PSE,QAT,SAU,SDN,SYR,TUN)
-       MEA . (YEM)
-       NEU . (ALB,AND,BIH,CHE,GRL,ISL,LIE,MCO,MKD,MNE)
-       NEU . (NOR,SJM,SMR,SRB,TUR,VAT)
        OAS . (AFG,ASM,ATF,BGD,BRN,BTN,CCK,COK,CXR,FJI)
        OAS . (FSM,GUM,IDN,IOT,KHM,KIR,KOR,LAO,LKA,MDV)
        OAS . (MHL,MMR,MNG,MNP,MYS,NCL,NFK,NIU,NPL,NRU)
        OAS . (PAK,PCN,PHL,PLW,PNG,PRK,PYF,SGP,SLB,THA)
        OAS . (TKL,TLS,TON,TUV,UMI,VNM,VUT,WLF,WSM)
-       REF . (ARM,AZE,BLR,GEO,KAZ,KGZ,MDA,RUS,TJK,TKM)
-       REF . (UKR,UZB)
        SSA . (AGO,BDI,BEN,BFA,BWA,CAF,CIV,CMR,COD,COG)
        SSA . (COM,CPV,DJI,ERI,ETH,GAB,GHA,GIN,GMB,GNB)
        SSA . (GNQ,KEN,LBR,LSO,MDG,MLI,MOZ,MRT,MUS,MWI)
        SSA . (MYT,NAM,NER,NGA,REU,RWA,SEN,SHN,SLE,SOM)
        SSA . (SSD,STP,SWZ,SYC,TCD,TGO,TZA,UGA,ZAF,ZMB)
        SSA . (ZWE)
+       EUR . (ALA,AUT,BEL,BGR,CYP,CZE,DEU,DNK,ESP,EST)
+       EUR . (FIN,FRA,FRO,GBR,GGY,GIB,GRC,HRV,HUN,IMN)
+       EUR . (IRL,ITA,JEY,LTU,LUX,LVA,MLT,NLD,POL,PRT)
+       EUR . (ROU,SVK,SVN,SWE)
+       NEU . (ALB,AND,BIH,CHE,GRL,ISL,LIE,MCO,MKD,MNE)
+       NEU . (NOR,SJM,SMR,SRB,TUR,VAT)
+       MEA . (ARE,BHR,DZA,EGY,ESH,IRN,IRQ,ISR,JOR,KWT)
+       MEA . (LBN,LBY,MAR,OMN,PSE,QAT,SAU,SDN,SYR,TUN)
+       MEA . (YEM)
+       REF . (ARM,AZE,BLR,GEO,KAZ,KGZ,MDA,RUS,TJK,TKM)
+       REF . (UKR,UZB)
+       CAZ . (AUS,CAN,HMD,NZL,SPM)
+       CHA . (CHN,HKG,MAC,TWN)
+       IND . (IND)
+       JPN . (JPN)
        USA . (USA)
       /
 iso_regi "all iso countries and EU and greater China region" /  EUR,CHA,
@@ -753,8 +753,8 @@ iso_regi "all iso countries and EU and greater China region" /  EUR,CHA,
 
    map_iso_regi(iso_regi,all_regi) "mapping from iso countries to regions that represent country" 
          /
-       CHA . CHA
        EUR . EUR
+       CHA . CHA
        IND . IND
        JPN . JPN
        USA . USA

@@ -1,0 +1,5 @@
+require(mrremind)
+POP = calcOutput("Population", aggregate = T)
+GDP = calcOutput("GDPppp", aggregate = T)
+IEA = calcOutput("IO", subtype = "IEA_output", aggregate = T)
+save()
