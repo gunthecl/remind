@@ -84,7 +84,7 @@
 * 
 * Input data revision: 5.964
 * 
-* Last modification (input data): Fri Feb  5 18:26:23 2021
+* Last modification (input data): Fri Feb  5 19:19:22 2021
 * 
 *###################### R SECTION END (VERSION INFO) ###########################
 
@@ -139,7 +139,7 @@ option profile = 0;
 
 
 ***---------------------    Run name    -----------------------------------------
-$setGlobal c_expname  SSP1-Base
+$setGlobal c_expname  SSP1-Base200perc
 
 ***------------------------------------------------------------------------------
 ***                           MODULES
@@ -430,7 +430,7 @@ cm_flex_tax = 0; !! def 0
 cm_PriceDurSlope_elh2 = 20; !! def 10
 cm_FlexTaxFeedback = 0; !! def 0, off
 
-c_costbiogasc = 1; !! def 1
+c_costbiogasc = NA; !! def 1
 
 *** --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ***                           YOU ARE IN THE WARNING ZONE (DON'T DO CHANGES HERE)

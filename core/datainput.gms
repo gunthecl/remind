@@ -943,7 +943,7 @@ loop(teNoLearn(te),
 display pm_inco0_t;
 
 *Adjust costs for biogasc
-*pm_inco0_t(ttot,all_regi,"biogasc") = c_costbiogasc * pm_inco0_t(ttot,all_regi,"biogas") ;
+pm_inco0_t(ttot,all_regi,"biogasc") = c_costbiogasc * pm_inco0_t(ttot,all_regi,"biogas") ;
 
 *display pm_inco0_t(ttot,all_regi,"biogasc") ;
 
