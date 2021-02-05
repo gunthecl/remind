@@ -84,7 +84,7 @@
 * 
 * Input data revision: 5.964
 * 
-* Last modification (input data): Fri Feb  5 14:50:59 2021
+* Last modification (input data): Fri Feb  5 15:50:05 2021
 * 
 *###################### R SECTION END (VERSION INFO) ###########################
 
@@ -139,7 +139,7 @@ option profile = 0;
 
 
 ***---------------------    Run name    -----------------------------------------
-$setGlobal c_expname  SSP1-Base200%
+$setGlobal c_expname  SSP1-Base120%
 
 ***------------------------------------------------------------------------------
 ***                           MODULES
