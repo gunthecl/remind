@@ -144,8 +144,6 @@ $offdelim
 /
 ;
 
-*Adjust costs for biogasc
-pm_inco0_t(ttot,all_regi,"biogasc") = c_costbiogasc * pm_inco0_t(ttot,all_regi,"biogasc") ;
 
 *JH* SSP energy technology scenario
 table f_dataglob_SSP1(char,all_te)        "Techno-economic assumptions consistent with SSP1"
@@ -943,6 +941,11 @@ loop(teNoLearn(te),
     );
 );
 display pm_inco0_t;
+
+*Adjust costs for biogasc
+pm_inco0_t(ttot,all_regi,"biogasc") = c_costbiogasc * pm_inco0_t(ttot,all_regi,"biogasc") ;
+
+display pm_inco0_t(ttot,all_regi,"biogasc") ;
 
 ***for those technologies, for which differentiated costs are available for 2015-2040, use those
 $if %cm_techcosts% == "REG"   loop(teRegTechCosts(te)$(not teLearn(te)),
