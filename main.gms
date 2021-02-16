@@ -84,7 +84,7 @@
 * 
 * Input data revision: 5.964
 * 
-* Last modification (input data): Fri Feb  5 19:37:00 2021
+* Last modification (input data): Tue Feb  9 16:38:53 2021
 * 
 *###################### R SECTION END (VERSION INFO) ###########################
 
@@ -139,7 +139,7 @@ option profile = 0;
 
 
 ***---------------------    Run name    -----------------------------------------
-$setGlobal c_expname  SSP1-Base200perc
+$setGlobal c_expname  SSP1-NDC
 
 ***------------------------------------------------------------------------------
 ***                           MODULES
@@ -164,7 +164,7 @@ $setGlobal growth  exogenous          !! def = exogenous
 ***---------------------    21_tax    -------------------------------------------
 $setGlobal tax  on                    !! def = on
 ***---------------------    22_subsidizeLearning    -----------------------------
-$setGlobal subsidizeLearning  off     !! def = off
+$setGlobal subsidizeLearning  globallyOptimal     !! def = off
 ***---------------------    23_capitalMarket    -----------------------------
 $setGlobal capitalMarket  debt_limit     !! def = debt_limit
 ***---------------------    24_trade    -----------------------------------------
@@ -192,13 +192,13 @@ $setglobal stationary  off            !! def = simple
 ***---------------------    39_CCU    --------------------------------------
 $setglobal CCU  off !! def = off
 ***---------------------    40_techpol  -----------------------------------------
-$setglobal techpol  none              !! def = none
+$setglobal techpol  NDC2018              !! def = none
 ***---------------------    41_emicapregi  --------------------------------------
 $setglobal emicapregi  none           !! def = none
 ***---------------------    42_banking  -----------------------------------------
 $setglobal banking  off               !! def = off
 ***---------------------    45_carbonprice  -------------------------------------
-$setglobal carbonprice  none          !! def = none
+$setglobal carbonprice  NDC2018          !! def = none
 ***---------------------    47_regipol  -------------------------------------
 $setglobal regipol  none              !! def = none
 ***---------------------    50_damages    ---------------------------------------
@@ -318,9 +318,9 @@ c_keep_iteration_gdxes = 0;     !! def = 0
 cm_nash_autoconverge   = 1;     !! def = 1
 $setglobal cm_MAgPIE_coupling  off     !! def = "off"
 
-cm_emiscen        = 1;         !! def = 1
-$setglobal cm_rcp_scen  none   !! def = "none"
-cm_co2_tax_2020   = -1;        !! def = -1
+cm_emiscen        = 9;         !! def = 1
+$setglobal cm_rcp_scen  rcp45   !! def = "none"
+cm_co2_tax_2020   = 1;        !! def = -1
 cm_co2_tax_growth = 1.025;      !! def = 1.05
 c_macscen         = 1;         !! def = 1
 
@@ -355,12 +355,12 @@ $setglobal c_GDPpcScen  SSP1     !! def = gdp_SSP2   (automatically adjusted by 
 cm_GDPcovid      = 0;            !! def = 0
 
 *AG* and *CB* for cm_startyear greater than 2005, you have to copy the fulldata.gdx (rename it to: input_ref.gdx) from the run you want to build your new run onto.
-cm_startyear      = 2005;      !! def = 2005 for a BAU, 2015 for policy runs
+cm_startyear      = 2025;      !! def = 2005 for a BAU, 2015 for policy runs
 c_start_budget    = 2100;      !! def = 2100
 
 cm_prtpScen         = 3;         !! def = 3
 cm_fetaxscen        = 2;         !! def = 3
-cm_multigasscen     = 2;         !! def = 2
+cm_multigasscen     = 3;         !! def = 2
 cm_permittradescen  = 1;         !! def = 1
 cm_limit_peur_scen  = 1;         !! def = 1
 $setGlobal cm_oil_scen  lowOil         !! def = medOil
@@ -385,7 +385,7 @@ c_techAssumptScen     = 2;         !! def = 1
 c_ccsinjecratescen    = 2;         !! def = 1
 c_ccscapratescen      = 1;         !! def = 1
 c_export_tax_scen     = 0;         !! def = 0
-cm_iterative_target_adj  = 0;      !! def = 0
+cm_iterative_target_adj  = 3;      !! def = 0
 cm_gdximport_target      = 0;      !! def = 0
 $setglobal c_SSP_forcing_adjust  forcing_SSP1   !! def = forcing_SSP2
 $setglobal c_delayPolicy  SPA0           !! def = SPA0
@@ -430,7 +430,7 @@ cm_flex_tax = 0; !! def 0
 cm_PriceDurSlope_elh2 = 20; !! def 10
 cm_FlexTaxFeedback = 0; !! def 0, off
 
-c_costbiogasc = NA; !! def 1
+c_costbiogasc = 1; !! def 1
 
 *** --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ***                           YOU ARE IN THE WARNING ZONE (DON'T DO CHANGES HERE)
