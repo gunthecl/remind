@@ -1,5 +1,7 @@
 # REMIND - REgional Model of INvestments and Development
 
+[![CodeCheck Status](https://github.com/remindmodel/remind/workflows/check/badge.svg)](https://github.com/remindmodel/remind/actions) 
+
   <https://www.pik-potsdam.de/research/transformation-pathways/models/remind>
 
 ## WHAT IS REMIND?
@@ -13,7 +15,7 @@ The macro-economic core of REMIND is a Ramsey-type optimal growth model
 in which intertemporal global welfare is optimized subject to equilibrium constraints.
 
 ## DOCUMENTATION
-The model documentation for version 2.1.0 can be found at https://rse.pik-potsdam.de/doc/remind/2.1.0.
+The model documentation for version 2.1.3 can be found at https://rse.pik-potsdam.de/doc/remind/2.1.3.
 
 A most recent version of the documentation can also be extracted from the
 model source code via the R package goxygen
@@ -105,7 +107,7 @@ pkgs <- c("gdxrrw",
           "madrat",
           "mip",
           "lucode",
-          "remind",
+          "remind2",
           "lusweave",
           "luscale",
           "goxygen",
@@ -117,7 +119,6 @@ us at remind@pik-potsdam.de to discuss alternatives if this is not possible.
 For post-processing model outputs *Latex* is required
 (https://www.latex-project.org/get/). To be seen by the model it also needs to
 added to the PATH variable of your system.
-
 
 ## HOW TO CONFIGURE
 Model run settings are set in `config/default.cfg` (or another config file of
