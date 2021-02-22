@@ -84,7 +84,7 @@
 * 
 * Input data revision: 5.979
 * 
-* Last modification (input data): Mon Feb 22 10:06:31 2021
+* Last modification (input data): Mon Feb 22 10:33:47 2021
 * 
 *###################### R SECTION END (VERSION INFO) ###########################
 
@@ -139,11 +139,7 @@ option profile = 0;
 
 
 ***---------------------    Run name    -----------------------------------------
-<<<<<<< HEAD
-$setGlobal c_expname  SSP1-Base_biogasc100
-=======
-$setGlobal c_expname  SSP1-Base_biogasc100
->>>>>>> c463c6a15f716eeee8a02e8af3b5b5e7d38ae6f2
+$setGlobal c_expname  SSP2-Base
 
 ***------------------------------------------------------------------------------
 ***                           MODULES
@@ -349,7 +345,7 @@ $setglobal cm_MAgPIE_coupling  off     !! def = "off"
 cm_emiscen        = 1;         !! def = 1
 $setglobal cm_rcp_scen  none   !! def = "none"
 cm_co2_tax_2020   = -1;        !! def = -1
-cm_co2_tax_growth = 1.025;      !! def = 1.05
+cm_co2_tax_growth = 1.05;      !! def = 1.05
 c_macscen         = 1;         !! def = 1
 
 cm_nucscen       = 2;        !! def = 2
@@ -370,16 +366,16 @@ cm_CCS_steel           = 1;        !! def = 1
 
 $setglobal cm_secondary_steel_bound  none   !! def = "scenario"
 
-cm_bioenergy_tax    = 1.75;       !! def = 1.5
+cm_bioenergy_tax    = 1.5;       !! def = 1.5
 cm_bioenergymaxscen = 0;         !! def = 0
-cm_tradecost_bio     = 1;         !! def = 2
-$setglobal cm_LU_emi_scen  SSP1   !! def = SSP2
-cm_1stgen_phaseout  = 1;         !! def = 0
+cm_tradecost_bio     = 2;         !! def = 2
+$setglobal cm_LU_emi_scen  SSP2   !! def = SSP2
+cm_1stgen_phaseout  = 0;         !! def = 0
 cm_cprice_red_factor  = 1;         !! def = 1
 
-$setglobal cm_POPscen  pop_SSP1  !! def = pop_SSP2
-$setglobal cm_GDPscen  gdp_SSP1  !! def = gdp_SSP2
-$setglobal c_GDPpcScen  SSP1     !! def = gdp_SSP2   (automatically adjusted by start_run() based on GDPscen) 
+$setglobal cm_POPscen  pop_SSP2  !! def = pop_SSP2
+$setglobal cm_GDPscen  gdp_SSP2  !! def = gdp_SSP2
+$setglobal c_GDPpcScen  SSP2     !! def = gdp_SSP2   (automatically adjusted by start_run() based on GDPscen) 
 cm_GDPcovid      = 0;            !! def = 0
 
 *AG* and *CB* for cm_startyear greater than 2005, you have to copy the fulldata.gdx (rename it to: input_ref.gdx) from the run you want to build your new run onto.
@@ -387,13 +383,13 @@ cm_startyear      = 2005;      !! def = 2005 for a BAU, 2015 for policy runs
 c_start_budget    = 2100;      !! def = 2100
 
 cm_prtpScen         = 3;         !! def = 3
-cm_fetaxscen        = 2;         !! def = 3
+cm_fetaxscen        = 3;         !! def = 3
 cm_multigasscen     = 2;         !! def = 2
 cm_permittradescen  = 1;         !! def = 1
 cm_limit_peur_scen  = 1;         !! def = 1
-$setGlobal cm_oil_scen  lowOil         !! def = medOil
-$setGlobal cm_gas_scen  lowGas         !! def = medGas
-$setGlobal cm_coal_scen  lowCoal        !! def = medCoal
+$setGlobal cm_oil_scen  medOil         !! def = medOil
+$setGlobal cm_gas_scen  medGas         !! def = medGas
+$setGlobal cm_coal_scen  medCoal        !! def = medCoal
 cm_rentdiscoil      = 0.2;       !! def 0.2
 cm_rentdiscoil2     = 0.9;       !! def 0.9
 cm_rentconvoil      = 50;        !! def 50
@@ -405,17 +401,17 @@ cm_rentdisccoal2    = 0.6;       !! def 0.6
 cm_rentconvcoal     = 50;        !! def 50
 cm_earlyreti_rate   = 0.09;      !! def 0.09
 
-cm_so2tax_scen        = 4;         !! def =
+cm_so2tax_scen        = 1;         !! def =
 c_cint_scen           = 1;         !! def = 1
 cm_damage             = 0.005;     !! def = 0.005
 cm_solwindenergyscen  = 1;         !! def = 1
-c_techAssumptScen     = 2;         !! def = 1
-c_ccsinjecratescen    = 2;         !! def = 1
+c_techAssumptScen     = 1;         !! def = 1
+c_ccsinjecratescen    = 1;         !! def = 1
 c_ccscapratescen      = 1;         !! def = 1
 c_export_tax_scen     = 0;         !! def = 0
 cm_iterative_target_adj  = 0;      !! def = 0
 cm_gdximport_target      = 0;      !! def = 0
-$setglobal c_SSP_forcing_adjust  forcing_SSP1   !! def = forcing_SSP2
+$setglobal c_SSP_forcing_adjust  forcing_SSP2   !! def = forcing_SSP2
 $setglobal c_delayPolicy  SPA0           !! def = SPA0
 cm_gs_ew                 = 20;     !! def = 20
 cm_LimRock               = 1000;   !! def = 1000
@@ -424,13 +420,6 @@ cm_expoLinear_yearStart  = 2050;   !! def = 2050
 c_budgetCO2FFI           = 1000;   !! def = 1000
 c_abtrdy                 = 2010;   !! def = 2010
 c_abtcst                 = 1;      !! def = 1
-<<<<<<< HEAD
-c_budgetCO2              = 0;   !! def = 1300
-$setGlobal cm_regiCO2target  off       !! def = off
-cm_peakBudgYr                 = 2100;    !! def = 2050
-cm_taxCO2inc_after_peakBudgYr = 3;      !! def = 2
-cm_CO2priceRegConvEndYr       = 2050;   !! def = 2050
-=======
 c_budgetCO2              = 0;   !! def = 1300
 $setGlobal cm_regiCO2target  off   !! def = off
 cm_postTargetIncrease    = 2;      !! def = 2
@@ -460,7 +449,6 @@ $setGlobal cm_CCSRegiPol	 off   !! def = off
 $setGlobal cm_implicitFE  off !! def = off
 $setGlobal cm_implFETarget  2030.EUR_regi 1.26921 !! def = 2030.EUR_regi 1.26921
 $setGlobal cm_implFEExoTax  off   !! def = off
->>>>>>> c463c6a15f716eeee8a02e8af3b5b5e7d38ae6f2
 
 cm_trdadj            = 2;    !! def = 2.0
 cm_trdcst            = 1.5;  !! def = 1.5
@@ -476,12 +464,8 @@ cm_carbonprice_temperatureLimit       = 1.8;   !! def = 1.8
 
 cm_DiscRateScen        = 0;!! def = 0
 cm_noReboundEffect     = 0;
-<<<<<<< HEAD
-$setGlobal cm_esubGrowth  middle  !! def = low
-=======
 cm_INNOPATHS_priceSensiBuild     = -3;
 $setGlobal cm_EsubGrowth         low  !! def = low
->>>>>>> c463c6a15f716eeee8a02e8af3b5b5e7d38ae6f2
 $setGlobal c_scaleEmiHistorical  on  !! def = on
 $setGlobal cm_INNOPATHS_pushCalib  none !! def = none
 $setGlobal cm_INNOPATHS_reducCostB  none !! def = none
@@ -537,20 +521,14 @@ cm_ElLim_b = 1; !! def 1
 cm_startIter_EDGET = 14; !! def 14, by default EDGE-T is run first in iteration 14
 
 
-<<<<<<< HEAD
-=======
 cm_TaxConvCheck = 0; !! def 1, which means tax convergence check is on
 
->>>>>>> c463c6a15f716eeee8a02e8af3b5b5e7d38ae6f2
 cm_flex_tax = 0; !! def 0
 cm_PriceDurSlope_elh2 = 20; !! def 10
 cm_FlexTaxFeedback = 0; !! def 0, off
 
-<<<<<<< HEAD
 c_costbiogasc = 1; !! def 1
-=======
 $setGlobal cm_altFeEmiFac  off        !! def = off	
->>>>>>> c463c6a15f716eeee8a02e8af3b5b5e7d38ae6f2
 
 *** --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ***                           YOU ARE IN THE WARNING ZONE (DON'T DO CHANGES HERE)
@@ -568,23 +546,14 @@ $setGlobal cm_MOFEX  off        !! def = off
 $setGlobal cm_conoptv  conopt3    !! def = conopt3
 $setGlobal cm_ccsfosall  off        !! def = off
 
-$setGlobal cm_APscen  SSP1          !! def = SSP2
+$setGlobal cm_APscen  SSP2          !! def = SSP2
 $setGlobal cm_magicc_calibrateTemperature2000  uncalibrated  !! def=uncalibrated
 $setGlobal cm_magicc_config  OLDDEFAULT    !! def = OLDDEFAULT
 $setGlobal cm_magicc_temperatureImpulseResponse  off           !! def = off
 
 $setGlobal cm_damage_DiceLike_specification  HowardNonCatastrophic   !! def = HowardNonCatastrophic
 
-<<<<<<< HEAD
-$setglobal cm_CES_configuration  stat_off-indu_fixed_shares-buil_simple-tran_complex-POP_pop_SSP1-GDP_gdp_SSP1-Kap_debt_limit-Reg_690d3718e1   !! this will be changed by start_run()
-
-$setglobal c_CES_calibration_new_structure  0    !!  def  =  0
-$setglobal c_CES_calibration_iterations  10   !!  def  =  10
-$setglobal c_CES_calibration_iteration        1    !!  def  =  1
-$setglobal c_CES_calibration_write_prices  0    !!  def  =  0
-$setglobal cm_CES_calibration_default_prices  0  !!  def  =  0
-=======
-$setglobal cm_CES_configuration  stat_off-indu_fixed_shares-buil_simple-tran_complex-POP_pop_SSP1-GDP_gdp_SSP1-Kap_debt_limit-Reg_690d3718e1   !! this will be changed by start_run()
+$setglobal cm_CES_configuration  stat_off-indu_fixed_shares-buil_simple-tran_complex-POP_pop_SSP2-GDP_gdp_SSP2-Kap_debt_limit-Reg_690d3718e1   !! this will be changed by start_run()
 
 $setglobal c_CES_calibration_new_structure  0    !! def =  0
 $setglobal c_CES_calibration_iterations  10    !! def = 10
@@ -592,7 +561,6 @@ $setglobal c_CES_calibration_iteration          1    !! def =  1
 $setglobal c_CES_calibration_write_prices  0    !! def =  0
 $setglobal cm_CES_calibration_default_prices  0    !! def = 0
 $setglobal cm_calibration_string  off      !! def = off
->>>>>>> c463c6a15f716eeee8a02e8af3b5b5e7d38ae6f2
 
 $setglobal c_testOneRegi_region  EUR       !! def = EUR
 
