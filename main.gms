@@ -82,15 +82,9 @@
 * 
 * Regionscode: 690d3718e151be1b450b394c1064b1c5
 * 
-<<<<<<< HEAD
-* Input data revision: 5.964
-* 
-* Last modification (input data): Tue Feb  9 16:38:53 2021
-=======
 * Input data revision: 5.979
 * 
-* Last modification (input data): Mon Feb 08 15:48:42 2021
->>>>>>> c463c6a15f716eeee8a02e8af3b5b5e7d38ae6f2
+* Last modification (input data): Mon Feb 22 10:06:31 2021
 * 
 *###################### R SECTION END (VERSION INFO) ###########################
 
@@ -146,9 +140,9 @@ option profile = 0;
 
 ***---------------------    Run name    -----------------------------------------
 <<<<<<< HEAD
-$setGlobal c_expname  SSP1-NDC
+$setGlobal c_expname  SSP1-Base_biogasc100
 =======
-$setGlobal c_expname  default
+$setGlobal c_expname  SSP1-Base_biogasc100
 >>>>>>> c463c6a15f716eeee8a02e8af3b5b5e7d38ae6f2
 
 ***------------------------------------------------------------------------------
@@ -174,7 +168,7 @@ $setGlobal growth  exogenous          !! def = exogenous
 ***---------------------    21_tax    -------------------------------------------
 $setGlobal tax  on                    !! def = on
 ***---------------------    22_subsidizeLearning    -----------------------------
-$setGlobal subsidizeLearning  globallyOptimal     !! def = off
+$setGlobal subsidizeLearning  off     !! def = off
 ***---------------------    23_capitalMarket    -----------------------------
 $setGlobal capitalMarket  debt_limit     !! def = debt_limit
 ***---------------------    24_trade    -----------------------------------------
@@ -200,15 +194,15 @@ $setglobal industry  fixed_shares     !! def = simple
 ***---------------------    38_stationary    --------------------------------------
 $setglobal stationary  off            !! def = simple
 ***---------------------    39_CCU    --------------------------------------
-$setglobal CCU  off !! def = off
+$setglobal CCU  on !! def = off
 ***---------------------    40_techpol  -----------------------------------------
-$setglobal techpol  NDC2018              !! def = none
+$setglobal techpol  none              !! def = none
 ***---------------------    41_emicapregi  --------------------------------------
 $setglobal emicapregi  none           !! def = none
 ***---------------------    42_banking  -----------------------------------------
 $setglobal banking  off               !! def = off
 ***---------------------    45_carbonprice  -------------------------------------
-$setglobal carbonprice  NDC2018          !! def = none
+$setglobal carbonprice  none          !! def = none
 ***---------------------    47_regipol  -------------------------------------
 $setglobal regipol  none              !! def = none
 ***---------------------    50_damages    ---------------------------------------
@@ -352,9 +346,9 @@ c_keep_iteration_gdxes = 0;     !! def = 0
 cm_nash_autoconverge   = 1;     !! def = 1
 $setglobal cm_MAgPIE_coupling  off     !! def = "off"
 
-cm_emiscen        = 9;         !! def = 1
-$setglobal cm_rcp_scen  rcp45   !! def = "none"
-cm_co2_tax_2020   = 1;        !! def = -1
+cm_emiscen        = 1;         !! def = 1
+$setglobal cm_rcp_scen  none   !! def = "none"
+cm_co2_tax_2020   = -1;        !! def = -1
 cm_co2_tax_growth = 1.025;      !! def = 1.05
 c_macscen         = 1;         !! def = 1
 
@@ -389,12 +383,12 @@ $setglobal c_GDPpcScen  SSP1     !! def = gdp_SSP2   (automatically adjusted by 
 cm_GDPcovid      = 0;            !! def = 0
 
 *AG* and *CB* for cm_startyear greater than 2005, you have to copy the fulldata.gdx (rename it to: input_ref.gdx) from the run you want to build your new run onto.
-cm_startyear      = 2025;      !! def = 2005 for a BAU, 2015 for policy runs
+cm_startyear      = 2005;      !! def = 2005 for a BAU, 2015 for policy runs
 c_start_budget    = 2100;      !! def = 2100
 
 cm_prtpScen         = 3;         !! def = 3
 cm_fetaxscen        = 2;         !! def = 3
-cm_multigasscen     = 3;         !! def = 2
+cm_multigasscen     = 2;         !! def = 2
 cm_permittradescen  = 1;         !! def = 1
 cm_limit_peur_scen  = 1;         !! def = 1
 $setGlobal cm_oil_scen  lowOil         !! def = medOil
@@ -419,7 +413,7 @@ c_techAssumptScen     = 2;         !! def = 1
 c_ccsinjecratescen    = 2;         !! def = 1
 c_ccscapratescen      = 1;         !! def = 1
 c_export_tax_scen     = 0;         !! def = 0
-cm_iterative_target_adj  = 3;      !! def = 0
+cm_iterative_target_adj  = 0;      !! def = 0
 cm_gdximport_target      = 0;      !! def = 0
 $setglobal c_SSP_forcing_adjust  forcing_SSP1   !! def = forcing_SSP2
 $setglobal c_delayPolicy  SPA0           !! def = SPA0
@@ -437,12 +431,12 @@ cm_peakBudgYr                 = 2100;    !! def = 2050
 cm_taxCO2inc_after_peakBudgYr = 3;      !! def = 2
 cm_CO2priceRegConvEndYr       = 2050;   !! def = 2050
 =======
-c_budgetCO2              = 1350;   !! def = 1300
+c_budgetCO2              = 0;   !! def = 1300
 $setGlobal cm_regiCO2target  off   !! def = off
 cm_postTargetIncrease    = 2;      !! def = 2
 $setGlobal cm_quantity_regiCO2target  off !! def = off
-cm_peakBudgYr            = 2050;   !! def = 2050
-cm_taxCO2inc_after_peakBudgYr = 2; !! def = 2
+cm_peakBudgYr            = 2100;   !! def = 2050
+cm_taxCO2inc_after_peakBudgYr = 3; !! def = 2
 cm_CO2priceRegConvEndYr  = 2050;   !! def = 2050
 $setGlobal cm_emiMktETS  off       !! def = off
 $setGlobal cm_emiMktETS_type  off  !! def = off
@@ -588,9 +582,9 @@ $setglobal c_CES_calibration_new_structure  0    !!  def  =  0
 $setglobal c_CES_calibration_iterations  10   !!  def  =  10
 $setglobal c_CES_calibration_iteration        1    !!  def  =  1
 $setglobal c_CES_calibration_write_prices  0    !!  def  =  0
-$setglobal cm_CES_calibration_default_prices  0.1  !!  def  =  0
+$setglobal cm_CES_calibration_default_prices  0  !!  def  =  0
 =======
-$setglobal cm_CES_configuration  stat_off-indu_fixed_shares-buil_simple-tran_complex-POP_pop_SSP2-GDP_gdp_SSP2-Kap_debt_limit-Reg_690d3718e1   !! this will be changed by start_run()
+$setglobal cm_CES_configuration  stat_off-indu_fixed_shares-buil_simple-tran_complex-POP_pop_SSP1-GDP_gdp_SSP1-Kap_debt_limit-Reg_690d3718e1   !! this will be changed by start_run()
 
 $setglobal c_CES_calibration_new_structure  0    !! def =  0
 $setglobal c_CES_calibration_iterations  10    !! def = 10
